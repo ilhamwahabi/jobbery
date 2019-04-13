@@ -1,12 +1,11 @@
 import './style';
-import { Component } from 'preact';
+import './node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { h } from 'preact';
 
-export default class App extends Component {
-	render() {
-		return (
-			<div>
-				<h1>Hello, World!</h1>
-			</div>
-		);
-	}
-}
+const App = () => (
+	<div>
+		<h1>Jobberry</h1>
+	</div>
+);
+
+export default App;
