@@ -1,16 +1,14 @@
 {
-  "name": "jobbery",
-  "short_name": "jobbery",
+  "name": "Jobberry",
+  "short_name": "Jobberry",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
   "theme_color": "#673ab8",
-  "icons": [
-    {
-      "src": "/assets/icon.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ]
+  "icons": [{
+    "src": "/assets/icon.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }]
 }
