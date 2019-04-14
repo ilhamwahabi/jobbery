@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import GithubJobs from '../api/GithubJobs';
+import Jobs from './Job';
 
 class JobList extends Component {
 	constructor(props) {
@@ -15,11 +16,17 @@ class JobList extends Component {
 	}
 
 	renderJobs() {
-		return this.state.jobs.map(job => <div key={job.id}>{job.title}</div>);
+		return this.state.jobs.map(job => <Jobs key={job.id} {...job} />);
 	}
 
 	render() {
-		return <div style={{ flex: 1 }} className="container py-3">{this.renderJobs()}</div>;
+		return (
+			<div style={{ flex: 1 }} className="container py-3">
+				<div className="row">
+					{this.renderJobs()}
+				</div>
+			</div>
+		);
 	}
 }
 
