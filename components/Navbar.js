@@ -4,9 +4,9 @@ import { connect } from 'unistore/preact';
 import FormsActions from '../actions/forms';
 
 class Navbar extends Component {
-	changeKeyword = event => this.props.changeKeyword(event.target.value)
-	changeLocation = event => this.props.changeLocation(event.target.value)
-	changeIsFullTime = event => this.props.changeIsFullTime(event.target.checked)
+	changeKeyword = event => this.props.changeField('keyword', event.target.value)
+	changeLocation = event => this.props.changeField('location', event.target.value)
+	changeIsFullTime = event => this.props.changeField('isFullTime', event.target.checked)
 
 	onSubmit = event => {
 		event.preventDefault();
@@ -81,7 +81,4 @@ class Navbar extends Component {
 	}
 }
 
-export default connect(
-	'forms',
-	FormsActions
-)(Navbar);
+export default connect('forms', FormsActions)(Navbar);
