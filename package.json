@@ -30,6 +30,7 @@
     "bootstrap": "^4.3.1",
     "preact": "^8.2.1",
     "preact-compat": "^3.17.0",
-    "resolve-url-loader": "^3.1.0"
+    "resolve-url-loader": "^3.1.0",
+    "unistore": "^3.4.1"
   }
 }
