@@ -1,7 +1,13 @@
 import { h, Component } from 'preact';
 import { connect } from 'unistore/preact';
 
+import FormsActions from '../actions/forms';
+
 class Navbar extends Component {
+	changeKeyword = event => this.props.changeKeyword(event.target.value)
+	changeLocation = event => this.props.changeLocation(event.target.value)
+	changeIsFullTime = event => this.props.changeIsFullTime(event.target.checked)
+
 	onSubmit = event => {
 		event.preventDefault();
 	};
@@ -42,10 +48,14 @@ class Navbar extends Component {
 							class="form-control"
 							placeholder="Keyword"
 							value={keyword}
+							onInput={this.changeKeyword}
 						/>
 					</div>
 					<div className="input-group mx-2">
-						<select class="custom-select" id="country-select" value={location}>
+						<select
+							class="custom-select" id="country-select"
+							value={location} onChange={this.changeLocation}
+						>
 							<option value="id">Indonesia</option>
 							<option value="us">United States</option>
 						</select>
@@ -56,6 +66,7 @@ class Navbar extends Component {
 							id="inlineFormCheck"
 							type="checkbox"
 							value={isFullTime}
+							onChange={this.changeIsFullTime}
 						/>
 						<label class="form-check-label" for="inlineFormCheck">
 							Full time
@@ -72,5 +83,5 @@ class Navbar extends Component {
 
 export default connect(
 	'forms',
-	null
+	FormsActions
 )(Navbar);
