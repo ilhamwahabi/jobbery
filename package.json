@@ -20,6 +20,7 @@
     "bootstrap-loader": "^3.0.3",
     "eslint": "^4.5.0",
     "eslint-config-synacor": "^1.1.0",
+    "fast-async": "^6.3.8",
     "if-env": "^1.0.0",
     "jquery": "^3.4.0",
     "preact-cli": "^2.0.0",

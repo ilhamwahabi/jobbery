@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import { connect } from 'unistore/preact';
 
-import FormsActions from '../actions/forms';
+import formActions from '../actions/form';
 
 class Navbar extends Component {
 	changeKeyword = event => this.props.changeField('keyword', event.target.value)
@@ -13,7 +13,7 @@ class Navbar extends Component {
 	};
 
 	render() {
-		const { keyword, location, isFullTime } = this.props.forms;
+		const { keyword, location, isFullTime } = this.props.form;
 
 		return (
 			<div className="navbar navbar-expand-md navbar-light bg-light">
@@ -81,4 +81,4 @@ class Navbar extends Component {
 	}
 }
 
-export default connect('forms', FormsActions)(Navbar);
+export default connect('forms', formActions)(Navbar);

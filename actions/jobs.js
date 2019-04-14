@@ -1,6 +1,6 @@
 import GithubJobs from '../api/GithubJobs';
 
-const actions = (store) => ({
+const jobsActions = (store) => ({
 	async getJobs({ forms }) {
 		const { data } = await GithubJobs.get(`/jobs
 			?description=${forms.keyword}
@@ -8,8 +8,8 @@ const actions = (store) => ({
 			&full_time=${forms.isFullTime}`
 		);
 
-		return store.setState({ jobs: data });
+		store.setState({ jobs: data });
 	}
 });
 
-export default actions;
+export default jobsActions;
