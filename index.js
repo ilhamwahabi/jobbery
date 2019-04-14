@@ -7,10 +7,12 @@ import './style';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import JobList from './components/JobList';
 
 const App = () => (
 	<div className="App d-flex flex-column justify-content-between">
 		<Navbar />
+		<JobList />
 		<Footer />
 	</div>
 );

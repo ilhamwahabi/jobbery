@@ -3,7 +3,6 @@ import { h, Component } from 'preact';
 class Navbar extends Component {
 	onSubmit = (event) => {
 		event.preventDefault();
-		console.log({ event });
 	}
 
 	render() {
