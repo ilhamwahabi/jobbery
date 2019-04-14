@@ -1,22 +1,17 @@
 import { h, Component } from 'preact';
-import GithubJobs from '../api/GithubJobs';
+import { connect } from 'unistore/preact';
+
+import JobsActions from '../actions/jobs';
 import Jobs from './Job';
 
 class JobList extends Component {
 	constructor(props) {
 		super(props);
-
-		this.state = {
-			jobs: []
-		};
-
-		GithubJobs
-			.get('/jobs?description=react&location=usa')
-			.then(response => this.setState({ jobs: response.data }));
+		props.getJobs();
 	}
 
 	renderJobs() {
-		return this.state.jobs.map(job => <Jobs key={job.id} {...job} />);
+		return this.props.jobs.map(job => <Jobs key={job.id} {...job} />);
 	}
 
 	render() {
@@ -30,4 +25,4 @@ class JobList extends Component {
 	}
 }
 
-export default JobList;
+export default connect('jobs', JobsActions)(JobList);
