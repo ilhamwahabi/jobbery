@@ -1,8 +1,16 @@
 # Jobberry
 
-Simple vacant searcher for front end jobs (only).
+Simple vacant searcher for tech jobs (only).
 
-Build with Preact & Bootstrap. Use Github Jobs API for data.
+## Description
+
+Build with Preact & Bootstrap.
+
+Unistore for state management.
+
+Deployed in Netlify and Now.
+
+Use Express (NodeJS) and Github Jobs API for data provider.
 
 ## Usage
 
