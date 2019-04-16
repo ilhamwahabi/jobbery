@@ -5,7 +5,9 @@ const Jobs = ({ id, title, company, location }) => (
 		<div key={id} className="card">
 			<div className="card-body">
 				<h5 className="card-title">{title}</h5>
-				<h6 className="card-subtitle text-muted">{company} <span>({location})</span></h6>
+				<h6 className="card-subtitle text-muted">
+					{company} <span>({location})</span>
+				</h6>
 			</div>
 		</div>
 	</div>

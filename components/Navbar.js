@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import { connect } from 'unistore/preact';
 
-import formActions from '../actions/form';
+import actions from '../actions';
 
 class Navbar extends Component {
 	changeKeyword = event => this.props.changeField('keyword', event.target.value)
@@ -10,6 +10,7 @@ class Navbar extends Component {
 
 	onSubmit = event => {
 		event.preventDefault();
+		this.props.getJobs();
 	};
 
 	render() {
@@ -81,4 +82,8 @@ class Navbar extends Component {
 	}
 }
 
-export default connect('forms', formActions)(Navbar);
+// const actions = store => ({
+
+// })
+
+export default connect('form', actions)(Navbar);

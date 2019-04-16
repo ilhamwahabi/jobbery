@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import { connect } from 'unistore/preact';
 
-import JobsActions from '../actions/jobs';
+import actions from '../actions';
 import Jobs from './Job';
 
 class JobList extends Component {
@@ -25,4 +25,4 @@ class JobList extends Component {
 	}
 }
 
-export default connect('jobs', JobsActions)(JobList);
+export default connect('jobs', actions)(JobList);
