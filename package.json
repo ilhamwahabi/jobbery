@@ -17,20 +17,20 @@
     "build/*"
   ],
   "devDependencies": {
-    "bootstrap-loader": "^3.0.3",
-    "eslint": "^4.5.0",
-    "eslint-config-synacor": "^1.1.0",
+    "bootstrap-loader": "^3.0.4",
+    "eslint": "^6.8.0",
+    "eslint-config-synacor": "^3.0.5",
     "fast-async": "^6.3.8",
-    "if-env": "^1.0.0",
-    "jquery": "^3.4.0",
-    "preact-cli": "^2.0.0",
-    "tether": "^1.4.5"
+    "if-env": "^1.0.4",
+    "jquery": "^3.4.1",
+    "preact-cli": "^2.2.1",
+    "tether": "^1.4.7"
   },
   "dependencies": {
-    "axios": "^0.18.1",
-    "bootstrap": "^4.3.1",
-    "preact": "^10.0.1",
-    "resolve-url-loader": "^3.1.0",
-    "unistore": "^3.5.0"
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "preact": "^10.3.2",
+    "resolve-url-loader": "^3.1.1",
+    "unistore": "^3.5.1"
   }
 }
