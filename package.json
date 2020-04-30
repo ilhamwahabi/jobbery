@@ -22,7 +22,7 @@
     "eslint-config-synacor": "^3.0.5",
     "fast-async": "^6.3.8",
     "if-env": "^1.0.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "preact-cli": "^2.2.1",
     "tether": "^1.4.7"
   },
